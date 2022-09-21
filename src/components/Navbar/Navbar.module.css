@@ -1,0 +1,16 @@
+.navbar {
+    display: flex;
+    font-size: 12px;
+}
+
+.navbar > a {
+    padding: 8px 12px;
+    color: rgb(126, 126, 126);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.5s ease;
+}
+
+.navbar > a:hover {
+    color: rgb(237, 237, 237);
+}
