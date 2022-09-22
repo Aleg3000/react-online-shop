@@ -8,12 +8,14 @@ import AboutPage from './pages/About/About';
 import ShopPage from './pages/Shop/Shop';
 import BagPage from 'pages/Bag/Bag';
 import SellPage from 'pages/Sell/Sell';
+import MainPage from 'pages/Main/Main';
 
 function App() {
   return (
     <>
       <Header />
       <Routes>
+        <Route path="/" element={<MainPage />}></Route>
         <Route path="/shop" element={<ShopPage />}></Route>
         <Route path="/sell" element={<SellPage />}></Route>
         <Route path="/about" element={<AboutPage />}></Route>

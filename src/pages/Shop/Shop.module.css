@@ -1,0 +1,59 @@
+.title {
+    padding: 30px 32px;
+    text-transform: uppercase;
+}
+
+.settings {
+    display: flex;
+    list-style: none;
+}
+
+.settings > li, input {
+    padding: 10px 40px;
+    cursor: pointer;
+    width: 25%;
+    height: 64px;
+    font-size: 18px;
+    line-height: 40px;
+    color: #ccc;
+    border: solid 1px #f0f0f0;
+    border-left: none;
+    text-transform: uppercase;
+    font-family: HelveticaNeueW01-75Bold, sans-serif;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.settings > input {
+    cursor: text;
+}
+
+.settings > li:hover {
+    border-bottom: solid 4px #f0f0f0;
+    color: black;
+}
+
+.settings > input:hover, input:focus {
+    border-bottom: solid 4px #f0f0f0;
+    color: black;
+    padding-bottom: 7px;
+}
+
+.settings > input::placeholder {
+    color: #ccc;
+}
+
+.settings > input:focus::placeholder {
+    color: #999;
+}
+
+.settings > input:focus {
+    outline: none;
+    color: black;
+}
+
+.settings > input::selection {
+    color: #fff;
+    text-shadow: none;
+    background-color: #000000fc;
+}

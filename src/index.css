@@ -1,5 +1,6 @@
 @import url(//db.onlinewebfonts.com/c/4a086cb2a88d233347fbf65f4a8b6ead?family=HelveticaNeueLTW01-75Bold);
 
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -12,4 +13,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
