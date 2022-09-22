@@ -102,7 +102,7 @@ const images: [string, string][] = [
   [image33, image33a],
 ];
 
-const data: IProduct[] = [
+const sneakersData: IProduct[] = [
   {
     num: '1',
     brand: 'Nike',
@@ -732,4 +732,4 @@ const data: IProduct[] = [
   },
 ];
 
-export default data;
+export default sneakersData;

@@ -24,6 +24,23 @@
     transition: all 0.5s ease;
 }
 
+.asd {
+    padding: 10px 40px;
+    cursor: pointer;
+    transform: translateX(-40px);
+    width: calc(100% + 80px);
+    height: 64px;
+    font-size: 18px;
+    line-height: 40px;
+    color: #ccc;
+    border: solid 1px #f0f0f0;
+    border-left: none;
+    text-transform: uppercase;
+    font-family: HelveticaNeueW01-75Bold, sans-serif;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
 .settings > input {
     cursor: text;
 }
@@ -56,4 +73,13 @@
     color: #fff;
     text-shadow: none;
     background-color: #000000fc;
+}
+
+/* prosucts */
+
+.products {
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 10px; */
 }
