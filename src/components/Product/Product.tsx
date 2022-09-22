@@ -6,11 +6,12 @@ import classes from './Product.module.css';
 type myProps = {
   product: IProduct;
   key: string;
+  imgState: number[];
 };
 
-const Product = ({ product }: myProps) => {
+const Product = ({ product, imgState }: myProps) => {
   const [hoverState, setHoverState] = useState(false);
-  const [imgState, setImgState] = useState([1, 0]);
+  //   const [imgState, setImgState] = useState([1, 0]);
 
   const imageHandler = ({ type }: React.MouseEvent<HTMLImageElement>) => {
     type === 'mouseenter' ? setHoverState(true) : setHoverState(false);
