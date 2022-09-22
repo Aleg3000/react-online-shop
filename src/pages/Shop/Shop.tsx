@@ -1,7 +1,8 @@
 import Product from 'components/Product/Product';
 import Select from 'components/UI/Select';
 import sneakersData from 'data/data';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { IProduct } from 'ts/interfaces/interfaces';
 import classes from './Shop.module.css';
 
 export default function ShopPage() {
@@ -21,6 +22,18 @@ export default function ShopPage() {
 
   const [searchValue, setSearchValue] = useState('');
 
+  const [filteredData, setFilteredData] = useState(sneakersData);
+
+  const filterProduct = () => {
+    const filterFn = (el: IProduct) =>
+      searchValue === ''
+        ? true
+        : (el.brand + el.model).toLowerCase().includes(searchValue.toLowerCase());
+    setFilteredData([...sneakersData.filter(filterFn)]);
+  };
+
+  useEffect(filterProduct, [searchValue]);
+
   return (
     <>
       <h1 className={classes.title}>Sneakers</h1>
@@ -39,11 +52,16 @@ export default function ShopPage() {
           <Select options={['product view', 'outfit view']} onChange={changeProductView} />
         </li>
       </ul>
-      <div className={classes.products}>
-        {sneakersData.map((el) => (
-          <Product imgState={imgState} product={el} key={el.num}></Product>
-        ))}
-      </div>
+
+      {filteredData.length > 0 ? (
+        <div className={classes.products}>
+          {filteredData.map((el) => (
+            <Product imgState={imgState} product={el} key={el.num}></Product>
+          ))}
+        </div>
+      ) : (
+        <div>Nothing was found</div>
+      )}
     </>
   );
 }
