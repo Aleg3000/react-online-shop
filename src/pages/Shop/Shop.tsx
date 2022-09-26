@@ -1,5 +1,6 @@
 import Product from 'components/Product/Product';
-import Select from 'components/UI/Select';
+import Loader from 'components/UI/Loader/Loader';
+import Select from 'components/UI/Select/Select';
 import sneakersData from 'data/data';
 import React, { useEffect, useRef, useState } from 'react';
 import { IProduct } from 'ts/interfaces/interfaces';
@@ -52,7 +53,7 @@ export default function ShopPage() {
           <Select options={['product view', 'outfit view']} onChange={changeProductView} />
         </li>
       </ul>
-
+      {/* <Loader /> */}
       {filteredData.length > 0 ? (
         <div className={classes.products}>
           {filteredData.map((el) => (
